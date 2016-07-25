@@ -18,4 +18,3 @@
 2. comments are significantly more chatty than I'd want in production code, but this an attempt to show my process!
 
 3. Players are not instantly removed from the game if they have no card to play, instead playing an automatically losing rank-0 card. As a result, a player without the two cards necessary for a 'war' can come back and win the game in later rounds. The rules are unclear on what *should* happen here, so, this seemed okay.
-

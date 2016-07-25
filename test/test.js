@@ -1,9 +1,23 @@
-var assert = require('chai').assert;
-describe('Array', function() {
-  describe('#indexOf()', function() {
-    it('should return -1 when the value is not present', function() {
-      assert.equal(-1, [1,2,3].indexOf(5));
-      assert.equal(-1, [1,2,3].indexOf(0));
+var assert = require('chai').assert
+var Deck = require('../deck')
+var Card = require('../card')
+
+describe('Deck', function() {
+  describe('MakeDeck()', function() {
+    it('should make a deck with a size equal to suits * values', function() {
+      assert.equal(Deck.MakeDeck(2,3).length, 6);
+      assert.equal(Deck.MakeDeck(2,4).length, 8);
+    });
+  });
+});
+
+
+describe('Card', function() {
+  describe('Constructor', function() {
+    it('should make a new card with predicted suit and rank.', function() {
+      var newCard = new Card(1,2)
+      assert.equal(newCard.suit, 1);
+      assert.equal(newCard.rank, 2);
     });
   });
 });
